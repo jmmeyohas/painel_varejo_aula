@@ -15,7 +15,7 @@ st.markdown("""
 @st.cache_data
 def load_data():
     # Carregando e limpando os dados conforme as etapas anteriores
-    df = pd.read_csv('/content/online_retail.csv', encoding='ISO-8859-1')
+    df = pd.read_csv('online_retail.csv', encoding='ISO-8859-1')
     df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
     df.dropna(subset=['Description', 'CustomerID'], inplace=True)
     df = df[df['Quantity'] > 0]
